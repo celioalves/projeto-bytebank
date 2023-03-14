@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime, timedelta
 
 class Funcionario:
     def __init__(self, nome, data_nascimento, salario):
