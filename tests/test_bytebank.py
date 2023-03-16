@@ -1,5 +1,5 @@
 import pytest
-
+from pytest import mark
 from codigo.bytebank import Funcionario
 
 class TestClass:
@@ -34,6 +34,7 @@ class TestClass:
 
         assert resultado == esperado #THEN
 
+    @mark.calcular_bonus
     def test_quando_calcular_bonus_recebe_1000_deve_retornar_100(self):
         entrada_salario = 1000 #GIVEN
         esperado = 100
@@ -43,6 +44,7 @@ class TestClass:
 
         assert resultado == esperado
 
+    @mark.calcular_bonus
     def test_quando_calcular_bonus_recebe_100000_deve_retornar_exception(self):
         with pytest.raises(Exception):
             entrada_salario = 100000 # GIVEN
