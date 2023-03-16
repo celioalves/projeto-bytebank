@@ -1,8 +1,7 @@
 from codigo.bytebank import Funcionario
 
 
-def teste_idade():
-    funcionario_teste = Funcionario('Teste', '13/03/1990', 1111)
-    print(f'Teste = {funcionario_teste.idade()}')
+ana = Funcionario('ana', '11/11/11', 100000)
+print(ana.calcular_bonus())
 
-teste_idade()
+
